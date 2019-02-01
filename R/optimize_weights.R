@@ -21,6 +21,7 @@
 #' 
 #' optimize_weights(1:4, list(m1, m2, m3, m4))
 #'
+#' @importFrom stats optim
 #' @export
 optimize_weights <- function(outcome, predictionlist) {
   # Sanity checks needed:
