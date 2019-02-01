@@ -17,6 +17,6 @@
 #'
 #' @export
 rps <- function(m, outcome, rankweights = 1L) {
-    .Call(`_socceR_rps`, m, outcome, rankweights)
+    .Call('_socceR_rps', PACKAGE = 'socceR', m, outcome, rankweights)
 }
 

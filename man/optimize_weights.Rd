@@ -2,7 +2,7 @@
 % Please edit documentation in R/optimize_weights.R
 \name{optimize_weights}
 \alias{optimize_weights}
-\title{Optimize weights from list of}
+\title{Optimize weights from list of prediction matrices}
 \usage{
 optimize_weights(outcome, predictionlist)
 }

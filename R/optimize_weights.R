@@ -1,4 +1,4 @@
-#' Optimize weights from list of 
+#' Optimize weights from list of prediction matrices
 #'
 #' Converts the factor labels to numeric values and returns the factor as a numeric vector
 #'
