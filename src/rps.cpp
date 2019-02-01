@@ -3,14 +3,17 @@ using namespace Rcpp ;
 
 //' Computes the rank probability score for a tournament
 //'
-//' @description Fill down missing values with the latest non-missing value
-//' @param m A prediction matrix 
-//' @param outcome A prediction matrix 
-//' @param rankweights A prediction matrix 
-//' @return A vector or list with the NA's replaced by the last observed value.
+//' @description Compute the (weighted) rank probability score for a tournament.
+//' @param m An R*T prediction matrix where the R rows represent the ordered ranks and each column is a team. Each column should sum to 1, and each row should sum to the number of teams that can attain a given rank. 
+//' @param outcome A vector of length T containing the integers 1 to R giving the ranks that were obtained by each of the T teams
+//' @param rankweights A vector of length R of rank weights or a single weight which will be reused for all ranks (defaults to 1)
+//' @return The rank probability score. Zero means a perfect score.
 //' @author Claus Ekstrom <ekstrom@@sund.ku.dk>
 //' @examples
 //'
+//' m1 <- matrix(c(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, .5, 0, 0, .5, .5), 4)
+//' m1 # Prediction where certain on the top ranks
+//' rps(m1, c(1, 2, 3, 4)) 
 //'
 //' @export
 // [[Rcpp::export]]
@@ -22,7 +25,8 @@ double rps(const NumericMatrix& m, NumericVector outcome, NumericVector rankweig
   if (rankweights.size() != m.nrow())
     rankweights = NumericVector(m.nrow(), rankweights(0));
 
-  // Should the weight be normalized
+  // Should the weight be normalized?
+  // This isn't implemented in the code here ... yet
 
   int CO = 0;
   // Iterate over teams (columns)

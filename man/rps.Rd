@@ -7,20 +7,23 @@
 rps(m, outcome, rankweights = 1L)
 }
 \arguments{
-\item{m}{A prediction matrix}
+\item{m}{An R*T prediction matrix where the R rows represent the ordered ranks and each column is a team. Each column should sum to 1, and each row should sum to the number of teams that can attain a given rank.}
 
-\item{outcome}{A prediction matrix}
+\item{outcome}{A vector of length T containing the integers 1 to R giving the ranks that were obtained by each of the T teams}
 
-\item{rankweights}{A prediction matrix}
+\item{rankweights}{A vector of length R of rank weights or a single weight which will be reused for all ranks (defaults to 1)}
 }
 \value{
-A vector or list with the NA's replaced by the last observed value.
+The rank probability score. Zero means a perfect score.
 }
 \description{
-Fill down missing values with the latest non-missing value
+Compute the (weighted) rank probability score for a tournament.
 }
 \examples{
 
+m1 <- matrix(c(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, .5, 0, 0, .5, .5), 4)
+m1 # Prediction where certain on the top ranks
+rps(m1, c(1, 2, 3, 4)) 
 
 }
 \author{
