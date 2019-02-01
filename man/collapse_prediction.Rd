@@ -20,11 +20,9 @@ Returns a vector of numeric values. Elements in the input factor that cannot be 
 }
 \examples{
 
-f <- factor(c(1,2,1,3,2,1,2,3,1))
-fac2num(f)
 
 }
 \author{
-Claus Ekstrom \email{claus@rprimer.dk}
+Claus Ekstrom \email{ekstrom@sund.ku.dk}
 }
 \keyword{manip}

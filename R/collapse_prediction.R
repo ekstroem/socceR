@@ -6,12 +6,10 @@
 #'
 #' @param ranks A factor
 #' @return Returns a numeric vector of the same length as x
-#' @author Claus Ekstrom \email{claus@@rprimer.dk}
+#' @author Claus Ekstrom \email{ekstrom@@sund.ku.dk}
 #' @keywords manip
 #' @examples
 #'
-#' f <- factor(c(1,2,1,3,2,1,2,3,1))
-#' fac2num(f)
 #'
 #' @export
 collapse_prediction <- function(ranks=c(1, 2, 3, 4, 8, 16, 32)) {
