@@ -4,12 +4,14 @@
 \alias{optimize_weights}
 \title{Optimize weights from list of prediction matrices}
 \usage{
-optimize_weights(outcome, predictionlist)
+optimize_weights(predictionlist, outcome, FUN = rps)
 }
 \arguments{
-\item{outcome}{A factor}
-
 \item{predictionlist}{A factor}
+
+\item{outcome}{An integer vector listing the}
+
+\item{FUN}{}
 }
 \value{
 Returns a numeric vector containing an optimal of the weights of the
@@ -30,7 +32,7 @@ m3 <- matrix(c(.5, .5, 0, 0, .5, .5, 0, 0, 0, 0, .5, .5, 0, 0, .5, .5), 4)
 m3  # Prediction where no clue about anything
 m4 <- matrix(rep(1/4, 16), 4)
 
-optimize_weights(1:4, list(m1, m2, m3, m4))
+optimize_weights(list(m1, m2, m3, m4), 1:4)
 
 }
 \author{
