@@ -7,20 +7,17 @@
 optimize_weights(predictionlist, outcome, FUN = rps)
 }
 \arguments{
-\item{predictionlist}{A factor}
+\item{predictionlist}{A list of R x T prediction matrices where each column sum to 1 and each row sums to}
 
 \item{outcome}{An integer vector listing the}
 
-\item{FUN}{}
+\item{FUN}{The function used for optimizing the predictions. The default is top use rps for the rank probability score. Another option is logloss for log loss.}
 }
 \value{
-Returns a numeric vector containing an optimal of the weights of the
+Returns a numeric vector containing an optimal vector of weights that sum to 1 and that minimizes the loss function.
 }
 \description{
-Converts the factor labels to numeric values and returns the factor as a numeric vector
-}
-\details{
-Returns a vector of numeric values. Elements in the input factor that cannot be converted to numeric will produce NA.
+Computes the optimal weights to obtain the minimal loss function from a list of prediction matrices.
 }
 \examples{
 
@@ -36,6 +33,6 @@ optimize_weights(list(m1, m2, m3, m4), 1:4)
 
 }
 \author{
-Claus Ekstrom \email{claus@rprimer.dk}
+Claus Ekstrom \email{ekstrom@sund.ku.dk}
 }
 \keyword{manip}
