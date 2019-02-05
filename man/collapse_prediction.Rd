@@ -25,7 +25,7 @@ m2 <- matrix(c(.5, .5, 0, 0, .5, .5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1), 4)
 collapse <- collapse_prediction(c(1, 2, 4))
 
 collapsed_prediction <- collapse \%*\% m2
-collapsen_prediction
+collapsed_prediction
 
 }
 \author{

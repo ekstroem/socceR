@@ -15,7 +15,7 @@
 #' collapse <- collapse_prediction(c(1, 2, 4))
 #'
 #' collapsed_prediction <- collapse %*% m2
-#' collapsen_prediction
+#' collapsed_prediction
 #' 
 #' @export
 collapse_prediction <- function(ranks=c(1, 2, 3, 4, 8, 16, 32)) {
