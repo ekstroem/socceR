@@ -2,24 +2,30 @@
 % Please edit documentation in R/collapse_prediction.R
 \name{collapse_prediction}
 \alias{collapse_prediction}
-\title{Convert factor to numeric vector}
+\title{Create a matrix to collapse tournament predictions to ranks}
 \usage{
 collapse_prediction(ranks = c(1, 2, 3, 4, 8, 16, 32))
 }
 \arguments{
-\item{ranks}{A factor}
+\item{ranks}{An integer vector of R ordered elements giving the cut offs of the ranks to create}
 }
 \value{
-Returns a numeric vector of the same length as x
+Returns a numeric matrix with R rows and T columns that can be multiplied on a square prediction matrix to obtain the collapsed predictions
 }
 \description{
-Converts the factor labels to numeric values and returns the factor as a numeric vector
+Creates a matrix to collapse the rows of a tournamewnt prediction matrix
 }
 \details{
 Returns a vector of numeric values. Elements in the input factor that cannot be converted to numeric will produce NA.
 }
 \examples{
 
+m2 <- matrix(c(.5, .5, 0, 0, .5, .5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1), 4)
+# Collapse into ranks 1, 2, and 3+4
+collapse <- collapse_prediction(c(1, 2, 4))
+
+collapsed_prediction <- collapse \%*\% m2
+collapsen_prediction
 
 }
 \author{
