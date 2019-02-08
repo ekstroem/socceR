@@ -30,7 +30,7 @@ double rps(const NumericMatrix& m, NumericVector outcome, NumericVector rankweig
 
   int CO = 0;
   // Iterate over teams (columns)
-  for (int j = 0; j < m.ncol()-1; ++j) {
+  for (int j = 0; j < m.ncol(); ++j) {
     CO = 0;
     cumsum = m(0, j);
     if (outcome(j)==1) {
