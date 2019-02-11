@@ -7,7 +7,7 @@ To install the development version of `socceR` run the following command from
 within R (this requires that the `devtools` package is already installed on the system.)
 
 
-    devtools::install_github('ekstroem/MESS')
+    devtools::install_github('ekstroem/socceR')
 
 
 ## Evaluating predictions
