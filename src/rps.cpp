@@ -49,5 +49,5 @@ double rps(const NumericMatrix& m, NumericVector outcome, NumericVector rankweig
 
     }
   }
-  return result/(m.rows()-1);
+  return result/(m.rows());
 }
