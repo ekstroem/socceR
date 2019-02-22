@@ -25,6 +25,9 @@ double rps(const NumericMatrix& m, NumericVector outcome, NumericVector rankweig
   if (rankweights.size() != m.nrow())
     rankweights = NumericVector(m.nrow(), rankweights(0));
 
+  if (m.nrow()==1)
+    return(0.0);
+
   // Should the weight be normalized?
   // This isn't implemented in the code here ... yet
 
@@ -49,5 +52,5 @@ double rps(const NumericMatrix& m, NumericVector outcome, NumericVector rankweig
 
     }
   }
-  return result/(m.rows());
+  return result/(m.rows()-1);
 }
