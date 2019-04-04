@@ -4,7 +4,7 @@
 \alias{optimize_weights}
 \title{Optimize weights from list of prediction matrices}
 \usage{
-optimize_weights(predictionlist, outcome, FUN = rps)
+optimize_weights(predictionlist, outcome, FUN = trps)
 }
 \arguments{
 \item{predictionlist}{A list of R x T prediction matrices where each column sum to 1 and each row sums to}

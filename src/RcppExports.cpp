@@ -18,23 +18,23 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// rps
-double rps(const NumericMatrix& m, NumericVector outcome, NumericVector rankweights);
-RcppExport SEXP _socceR_rps(SEXP mSEXP, SEXP outcomeSEXP, SEXP rankweightsSEXP) {
+// trps
+double trps(const NumericMatrix& m, NumericVector outcome, NumericVector rankweights);
+RcppExport SEXP _socceR_trps(SEXP mSEXP, SEXP outcomeSEXP, SEXP rankweightsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const NumericMatrix& >::type m(mSEXP);
     Rcpp::traits::input_parameter< NumericVector >::type outcome(outcomeSEXP);
     Rcpp::traits::input_parameter< NumericVector >::type rankweights(rankweightsSEXP);
-    rcpp_result_gen = Rcpp::wrap(rps(m, outcome, rankweights));
+    rcpp_result_gen = Rcpp::wrap(trps(m, outcome, rankweights));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
     {"_socceR_logloss", (DL_FUNC) &_socceR_logloss, 3},
-    {"_socceR_rps", (DL_FUNC) &_socceR_rps, 3},
+    {"_socceR_trps", (DL_FUNC) &_socceR_trps, 3},
     {NULL, NULL, 0}
 };
 

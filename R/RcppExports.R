@@ -32,10 +32,10 @@ logloss <- function(m, outcome, rankweights = 1L) {
 #'
 #' m1 <- matrix(c(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, .5, 0, 0, .5, .5), 4)
 #' m1 # Prediction where certain on the top ranks
-#' rps(m1, c(1, 2, 3, 4)) 
+#' trps(m1, c(1, 2, 3, 4)) 
 #'
 #' @export
-rps <- function(m, outcome, rankweights = 1L) {
-    .Call('_socceR_rps', PACKAGE = 'socceR', m, outcome, rankweights)
+trps <- function(m, outcome, rankweights = 1L) {
+    .Call('_socceR_trps', PACKAGE = 'socceR', m, outcome, rankweights)
 }
 

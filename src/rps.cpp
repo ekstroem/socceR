@@ -13,13 +13,22 @@ using namespace Rcpp ;
 //'
 //' m1 <- matrix(c(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, .5, 0, 0, .5, .5), 4)
 //' m1 # Prediction where certain on the top ranks
-//' rps(m1, c(1, 2, 3, 4)) 
+//' trps(m1, c(1, 2, 3, 4)) 
 //'
 //' @export
 // [[Rcpp::export]]
-double rps(const NumericMatrix& m, NumericVector outcome, NumericVector rankweights=1) {
+double trps(const NumericMatrix& m, NumericVector outcome, NumericVector rankweights=1) {
   double result = 0.0;
   double cumsum = 0.0;
+
+  // Various sanity checks
+  if (outcome.size() != m.ncol()) {
+    stop("The number of teams (columns in m) must match the number of teams ranks (length of outcome)");    
+  }
+
+  if (max(outcome) != m.nrow()) {
+    stop("The largest rank in the outcome must match the number of possible ranks (row in m)");    
+  }
 
   // Expand weight if it was just a single number
   if (rankweights.size() != m.nrow())
@@ -49,8 +58,7 @@ double rps(const NumericMatrix& m, NumericVector outcome, NumericVector rankweig
       cumsum += m(i, j);
       result += rankweights(i)*(cumsum - CO)*(cumsum - CO);
       //           Rcout << "   " << result << std::endl;
-
     }
   }
-  return result/(m.rows()-1);
+  return result/(m.rows()-1)/(m.cols());
 }

@@ -22,7 +22,7 @@
 #'
 #' @importFrom stats optim
 #' @export
-optimize_weights <- function(predictionlist, outcome, FUN=rps) {
+optimize_weights <- function(predictionlist, outcome, FUN=trps) {
   # Sanity checks needed:
   # Check equal dimensions of matrices
   # Check match with outcome

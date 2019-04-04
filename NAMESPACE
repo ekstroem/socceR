@@ -3,7 +3,7 @@
 export(collapse_prediction)
 export(logloss)
 export(optimize_weights)
-export(rps)
+export(trps)
 import(Rcpp)
 importFrom(Rcpp,evalCpp)
 importFrom(stats,optim)
