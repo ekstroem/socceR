@@ -1,6 +1,6 @@
 #' Evaluating sport tournament predictions
 #' 
-#' Description of your package
+#' Functions for evaluating sport tournament predictions, the tournament rank probability score, and working with models for prediction sport matches.
 #' 
 #' @docType package
 #' @author Claus Ekstrom <ekstrom@@sund.ku.dk> 

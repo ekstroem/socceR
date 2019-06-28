@@ -2,7 +2,7 @@ Package: socceR
 Type: Package
 Title: Evaluating sport tournament predictions
 Version: 0.1.1
-Date: 2019-04-04
+Date: 2019-07-01
 Authors@R: c(person(given="Claus Thorn", family="Ekstrøm", email="ekstrom@sund.ku.dk", role=c("aut", "cre")))
 Maintainer: Claus Thorn Ekstrøm <ekstrom@sund.ku.dk>
 Description: One paragraph description of what the package does as one

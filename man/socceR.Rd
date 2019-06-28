@@ -6,7 +6,7 @@
 \alias{socceR-package}
 \title{Evaluating sport tournament predictions}
 \description{
-Description of your package
+Functions for evaluating sport tournament predictions, the tournament rank probability score, and working with models for prediction sport matches.
 }
 \author{
 Claus Ekstrom <ekstrom@sund.ku.dk>
