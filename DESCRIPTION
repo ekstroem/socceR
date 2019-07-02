@@ -1,11 +1,11 @@
 Package: socceR
 Type: Package
-Title: Evaluating sport tournament predictions
+Title: Evaluating Sport Tournament Predictions
 Version: 0.1.1
 Date: 2019-07-01
 Authors@R: c(person(given="Claus Thorn", family="Ekstrøm", email="ekstrom@sund.ku.dk", role=c("aut", "cre")))
 Maintainer: Claus Thorn Ekstrøm <ekstrom@sund.ku.dk>
-Description: Functions for evaluating tournament predictions, simulating results from individual soccer matches and tournaments.
+Description: Functions for evaluating tournament predictions, simulating results from individual soccer matches and tournaments. See http://sandsynligvis.dk/2018/08/03/world-cup-prediction-winners/ for more information.
 License: GPL (>= 2)
 Depends: R (>= 3.1.0)
 Imports: Rcpp (>= 1.0.0)
