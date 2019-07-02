@@ -23,6 +23,7 @@ NULL
 #'   \item{GLSE2}{Updated prediction of Groll et all}
 #' }
 #' @source \url{http://sandsynligvis.dk/2018/08/03/world-cup-prediction-winners/}
+#'
 "fifa2018"
 
 #' FIFA 2018 end results
@@ -31,4 +32,5 @@ NULL
 #'
 #' @format A vector of the final rankings
 #' @source \url{http://sandsynligvis.dk/2018/08/03/world-cup-prediction-winners/}
+#'
 "fifa2018result"
